@@ -1,0 +1,25 @@
+{
+    "name": "billigoo/billigoo",
+    "description": "Facturation électronique Factur-X conforme 2026 pour WooCommerce.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.0",
+        "ext-dom": "*",
+        "ext-mbstring": "*",
+        "mpdf/mpdf": "^8.2",
+        "atgp/factur-x": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Billigoo\\": "includes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

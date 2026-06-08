@@ -1,0 +1,22 @@
+* { font-family: dejavusans, sans-serif; }
+body { font-size: 10pt; color: #1a1a1a; }
+.header { width: 100%; margin-bottom: 24px; }
+.header .seller { float: left; width: 55%; }
+.header .doc-title { float: right; width: 40%; text-align: right; }
+.seller-name { font-size: 13pt; font-weight: bold; }
+.doc-title h1 { font-size: 22pt; margin: 0 0 6px; color: #0b6; }
+.invoice-number { font-size: 12pt; font-weight: bold; }
+.buyer { clear: both; padding: 12px; background: #f5f7fa; margin-bottom: 18px; width: 45%; }
+.buyer-label { font-size: 8pt; text-transform: uppercase; color: #777; margin-bottom: 4px; }
+.buyer-name { font-weight: bold; }
+table.lines { width: 100%; border-collapse: collapse; margin-bottom: 18px; }
+table.lines th { background: #0b6; color: #fff; padding: 6px 8px; text-align: left; font-size: 9pt; }
+table.lines td { padding: 6px 8px; border-bottom: 1px solid #e3e8ee; }
+table.lines .num, .col-qty, .col-pu, .col-vat, .col-total { text-align: right; }
+table.totals { width: 40%; float: right; border-collapse: collapse; }
+table.totals td { padding: 5px 8px; }
+table.totals td.label { text-align: left; color: #555; }
+table.totals td.num { text-align: right; font-weight: bold; }
+table.totals tr.grand td { border-top: 2px solid #0b6; font-size: 12pt; color: #0b6; }
+.payment-terms { clear: both; padding-top: 24px; font-size: 9pt; }
+.legal-mention { margin-top: 30px; padding-top: 8px; border-top: 1px solid #e3e8ee; font-size: 8pt; color: #777; text-align: center; }

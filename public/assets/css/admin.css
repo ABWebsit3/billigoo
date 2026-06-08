@@ -1,0 +1,782 @@
+/**
+ * Billigoo admin design system.
+ *
+ * Implements the Stitch "Billigoo Design System" inside the WordPress admin,
+ * scoped to `.billigoo-app` so it never leaks into core admin screens.
+ */
+
+.billigoo-app,
+.billigoo-slideover-overlay {
+	/* Brand & surface */
+	--bg-primary: #006591;
+	--bg-primary-container: #0ea5e9;
+	--bg-on-primary: #ffffff;
+	--bg-primary-fixed: #c9e6ff;
+	--bg-on-primary-container: #003751;
+	--bg-secondary: #0062a1;
+
+	--bg-surface: #ffffff;
+	--bg-surface-bright: #f5faff;
+	--bg-surface-container-low: #eff4fa;
+	--bg-surface-container: #e9eef4;
+	--bg-surface-container-high: #e3e9ee;
+	--bg-surface-variant: #dde3e8;
+
+	--bg-on-surface: #161c20;
+	--bg-on-surface-variant: #3e4850;
+	--bg-outline: #6e7881;
+	--bg-outline-variant: #bec8d2;
+
+	/* Semantic */
+	--bg-success: #16a34a;
+	--bg-warning: #d97706;
+	--bg-error: #dc2626;
+
+	/* Badges (light tint / dark text) */
+	--badge-success-bg: #dcfce7;
+	--badge-success-text: #15803d;
+	--badge-info-bg: #dbeafe;
+	--badge-info-text: #1d4ed8;
+	--badge-error-bg: #fee2e2;
+	--badge-error-text: #b91c1c;
+	--badge-warn-bg: #fef3c7;
+	--badge-warn-text: #92400e;
+	--badge-neutral-bg: #f3f4f6;
+	--badge-neutral-text: #374151;
+
+	/* Shape */
+	--radius-card: 12px;
+	--radius-ctrl: 6px;
+	--shadow-card: 0 1px 3px rgba( 0, 0, 0, 0.1 );
+	--shadow-card-hover: 0 4px 12px rgba( 0, 0, 0, 0.08 );
+}
+
+.billigoo-app {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	color: var( --bg-on-surface );
+	max-width: 1280px;
+}
+
+.billigoo-app * {
+	box-sizing: border-box;
+}
+
+/* WP injects an h1 .wrap; hide the default and use our header. */
+.billigoo-app > h1:first-child {
+	display: none;
+}
+
+.billigoo-app .material-symbols-outlined {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-flex;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+	vertical-align: middle;
+}
+
+.billigoo-app .material-symbols-outlined.is-filled {
+	font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ---- Page header ------------------------------------------------------ */
+.billigoo-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin: 8px 0 24px;
+}
+
+.billigoo-header__title {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.billigoo-header__title h1 {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	color: var( --bg-on-surface );
+}
+
+.billigoo-header__title .material-symbols-outlined {
+	font-size: 30px;
+	color: var( --bg-primary );
+}
+
+.billigoo-pill-pro {
+	background: var( --bg-primary-container );
+	color: var( --bg-on-primary-container );
+	padding: 3px 8px;
+	border-radius: var( --radius-ctrl );
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.billigoo-header__actions {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+/* ---- Buttons ---------------------------------------------------------- */
+.billigoo-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 9px 16px;
+	border-radius: var( --radius-ctrl );
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.billigoo-btn .material-symbols-outlined {
+	font-size: 18px;
+}
+
+.billigoo-btn--primary {
+	background: var( --bg-primary-container );
+	color: var( --bg-on-primary );
+}
+
+.billigoo-btn--primary:hover {
+	background: var( --bg-primary );
+	color: #fff;
+}
+
+.billigoo-btn--ghost {
+	background: var( --bg-surface );
+	color: var( --bg-on-surface );
+	border-color: var( --bg-outline-variant );
+}
+
+.billigoo-btn--ghost:hover {
+	background: var( --bg-surface-container-low );
+	color: var( --bg-on-surface );
+}
+
+.billigoo-btn--sm {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+/* ---- Cards ------------------------------------------------------------ */
+.billigoo-card {
+	background: var( --bg-surface );
+	border: 1px solid rgba( 190, 200, 210, 0.4 );
+	border-radius: var( --radius-card );
+	box-shadow: var( --shadow-card );
+	overflow: hidden;
+}
+
+.billigoo-card__head {
+	padding: 20px 24px;
+	border-bottom: 1px solid rgba( 190, 200, 210, 0.35 );
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+}
+
+.billigoo-card__head h2,
+.billigoo-card__head h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.3;
+	color: var( --bg-on-surface );
+}
+
+.billigoo-card__body {
+	padding: 24px;
+}
+
+.billigoo-card__foot {
+	padding: 14px 24px;
+	text-align: center;
+	background: var( --bg-surface );
+	border-top: 1px solid rgba( 190, 200, 210, 0.3 );
+}
+
+/* ---- Metric cards ----------------------------------------------------- */
+.billigoo-metrics {
+	display: grid;
+	grid-template-columns: repeat( 4, minmax( 0, 1fr ) );
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+@media ( max-width: 1100px ) {
+	.billigoo-metrics { grid-template-columns: repeat( 2, minmax( 0, 1fr ) ); }
+}
+
+@media ( max-width: 600px ) {
+	.billigoo-metrics { grid-template-columns: 1fr; }
+}
+
+.billigoo-metric {
+	background: var( --bg-surface );
+	border: 1px solid rgba( 190, 200, 210, 0.4 );
+	border-radius: var( --radius-card );
+	box-shadow: var( --shadow-card );
+	padding: 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.billigoo-metric:hover {
+	transform: translateY( -2px );
+	box-shadow: var( --shadow-card-hover );
+}
+
+.billigoo-metric__label {
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+	color: var( --bg-on-surface-variant );
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+.billigoo-metric__value {
+	font-size: 36px;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	color: var( --bg-on-surface );
+}
+
+.billigoo-metric__value--primary { color: var( --bg-primary ); }
+.billigoo-metric__value--error { color: var( --bg-error ); }
+
+.billigoo-metric__foot {
+	font-size: 12px;
+	font-style: italic;
+	color: var( --bg-outline );
+}
+
+.billigoo-metric__trend {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 13px;
+	font-weight: 600;
+	color: var( --bg-success );
+}
+
+.billigoo-metric__trend .material-symbols-outlined { font-size: 16px; }
+
+.billigoo-metric__row {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+/* ---- Badges ----------------------------------------------------------- */
+.billigoo-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 3px 10px;
+	border-radius: 9999px;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1.4;
+	white-space: nowrap;
+}
+
+.billigoo-badge--success { background: var( --badge-success-bg ); color: var( --badge-success-text ); }
+.billigoo-badge--info { background: var( --badge-info-bg ); color: var( --badge-info-text ); }
+.billigoo-badge--error { background: var( --badge-error-bg ); color: var( --badge-error-text ); }
+.billigoo-badge--warn { background: var( --badge-warn-bg ); color: var( --badge-warn-text ); }
+.billigoo-badge--neutral { background: var( --badge-neutral-bg ); color: var( --badge-neutral-text ); }
+
+/* ---- Alerts ----------------------------------------------------------- */
+.billigoo-alert {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	border-radius: 8px;
+	border-left: 4px solid;
+	box-shadow: var( --shadow-card );
+	margin-bottom: 24px;
+}
+
+.billigoo-alert__msg {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 14px;
+	margin: 0;
+}
+
+.billigoo-alert--warn {
+	background: var( --badge-warn-bg );
+	border-color: var( --bg-warning );
+	color: var( --badge-warn-text );
+}
+
+.billigoo-alert--warn a { color: var( --bg-warning ); font-weight: 700; }
+
+.billigoo-alert--info {
+	background: var( --badge-info-bg );
+	border-color: var( --badge-info-text );
+	color: var( --badge-info-text );
+}
+
+.billigoo-alert--success {
+	background: var( --badge-success-bg );
+	border-color: var( --bg-success );
+	color: var( --badge-success-text );
+}
+
+/* ---- Layout grid ------------------------------------------------------ */
+.billigoo-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 16px;
+	align-items: start;
+}
+
+@media ( max-width: 960px ) {
+	.billigoo-grid { grid-template-columns: 1fr; }
+}
+
+.billigoo-col { display: flex; flex-direction: column; gap: 16px; }
+
+/* ---- Tables ----------------------------------------------------------- */
+.billigoo-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.billigoo-table thead th {
+	background: var( --bg-surface-container-low );
+	color: var( --bg-on-surface-variant );
+	font-size: 13px;
+	font-weight: 600;
+	padding: 14px 16px;
+	border-top: 1px solid rgba( 190, 200, 210, 0.3 );
+	border-bottom: 1px solid rgba( 190, 200, 210, 0.3 );
+}
+
+.billigoo-table tbody td {
+	padding: 14px 16px;
+	border-bottom: 1px solid rgba( 190, 200, 210, 0.18 );
+	font-size: 14px;
+	color: var( --bg-on-surface );
+}
+
+.billigoo-table tbody tr {
+	transition: background-color 0.12s ease;
+	cursor: pointer;
+}
+
+.billigoo-table tbody tr:hover { background: rgba( 239, 244, 250, 0.6 ); }
+
+.billigoo-table .is-num { font-weight: 600; color: var( --bg-primary ); }
+.billigoo-table .is-amount { text-align: right; font-weight: 600; }
+.billigoo-table .is-muted { color: var( --bg-outline ); font-size: 12px; }
+.billigoo-table th.is-amount { text-align: right; }
+
+/* ---- Compliance grid -------------------------------------------------- */
+.billigoo-checklist {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+@media ( max-width: 700px ) {
+	.billigoo-checklist { grid-template-columns: 1fr; }
+}
+
+.billigoo-checkitem {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px;
+	border-radius: 8px;
+	background: var( --bg-surface-container-low );
+	font-size: 14px;
+}
+
+.billigoo-checkitem .material-symbols-outlined { font-size: 22px; }
+.billigoo-checkitem--ok .material-symbols-outlined { color: var( --bg-success ); }
+.billigoo-checkitem--info { background: rgba( 219, 234, 254, 0.5 ); }
+.billigoo-checkitem--info .material-symbols-outlined { color: var( --badge-info-text ); }
+.billigoo-checkitem--todo .material-symbols-outlined { color: var( --bg-warning ); }
+
+/* ---- Shortcut buttons ------------------------------------------------- */
+.billigoo-eyebrow {
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var( --bg-on-surface-variant );
+	margin: 0 0 16px;
+}
+
+.billigoo-shortcut {
+	width: 100%;
+	text-align: left;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid rgba( 190, 200, 210, 0.3 );
+	background: var( --bg-surface );
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: var( --bg-on-surface );
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+	margin-bottom: 12px;
+}
+
+.billigoo-shortcut:hover {
+	background: rgba( 0, 101, 145, 0.05 );
+	border-color: var( --bg-primary );
+}
+
+.billigoo-shortcut__icon {
+	color: var( --bg-primary );
+	background: var( --bg-primary-fixed );
+	padding: 8px;
+	border-radius: 8px;
+	display: inline-flex;
+}
+
+.billigoo-shortcut__title { font-size: 13px; font-weight: 600; }
+.billigoo-shortcut__sub { font-size: 12px; color: var( --bg-outline ); }
+
+/* Resources list */
+.billigoo-reslist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.billigoo-reslist li { display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+.billigoo-reslist a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var( --bg-on-surface ); font-weight: 500; font-size: 14px; }
+.billigoo-reslist a:hover { color: var( --bg-primary ); }
+.billigoo-reslist .material-symbols-outlined { color: var( --bg-on-surface-variant ); }
+
+/* Help card */
+.billigoo-helpcard {
+	padding: 22px;
+	background: #00497a;
+	border-radius: var( --radius-card );
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.billigoo-helpcard .material-symbols-outlined { color: var( --bg-primary-fixed ); font-size: 26px; }
+.billigoo-helpcard__title { font-size: 13px; font-weight: 600; }
+.billigoo-helpcard p { margin: 2px 0 0; font-size: 12px; color: var( --bg-surface-variant ); }
+
+/* ---- Forms ------------------------------------------------------------ */
+.billigoo-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.billigoo-fields--single { grid-template-columns: 1fr; }
+
+@media ( max-width: 700px ) {
+	.billigoo-fields { grid-template-columns: 1fr; }
+}
+
+.billigoo-field { display: flex; flex-direction: column; gap: 6px; }
+.billigoo-field--full { grid-column: 1 / -1; }
+
+.billigoo-field label {
+	font-size: 13px;
+	font-weight: 600;
+	color: var( --bg-on-surface-variant );
+}
+
+.billigoo-field input[type="text"],
+.billigoo-field input[type="number"],
+.billigoo-field input[type="password"],
+.billigoo-field select,
+.billigoo-field textarea {
+	width: 100%;
+	padding: 9px 12px;
+	border: 1px solid var( --bg-outline-variant );
+	border-radius: var( --radius-ctrl );
+	font-size: 14px;
+	background: var( --bg-surface );
+	color: var( --bg-on-surface );
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.billigoo-field input:focus,
+.billigoo-field select:focus,
+.billigoo-field textarea:focus {
+	outline: none;
+	border-color: var( --bg-primary-container );
+	box-shadow: 0 0 0 2px rgba( 14, 165, 233, 0.25 );
+}
+
+.billigoo-field__help { font-size: 12px; color: var( --bg-outline ); margin: 0; }
+
+.billigoo-field--inline-icon { position: relative; }
+.billigoo-field--inline-icon input { padding-right: 40px; }
+.billigoo-field__icon {
+	position: absolute;
+	right: 10px;
+	bottom: 9px;
+	font-size: 20px;
+}
+.billigoo-field__icon.is-valid { color: var( --bg-success ); }
+.billigoo-field__icon.is-invalid { color: var( --bg-error ); }
+
+.billigoo-switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px; }
+.billigoo-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.billigoo-switch__track {
+	width: 40px; height: 22px;
+	background: var( --bg-outline-variant );
+	border-radius: 9999px;
+	position: relative;
+	transition: background-color 0.15s ease;
+	flex: none;
+}
+.billigoo-switch__track::after {
+	content: '';
+	position: absolute;
+	top: 2px; left: 2px;
+	width: 18px; height: 18px;
+	background: #fff;
+	border-radius: 50%;
+	transition: transform 0.15s ease;
+}
+.billigoo-switch input:checked + .billigoo-switch__track { background: var( --bg-primary-container ); }
+.billigoo-switch input:checked + .billigoo-switch__track::after { transform: translateX( 18px ); }
+
+.billigoo-form-actions {
+	margin-top: 24px;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+/* Read-only key/value */
+.billigoo-kv { display: flex; align-items: baseline; gap: 8px; font-size: 14px; }
+.billigoo-kv code {
+	background: var( --bg-surface-container );
+	border-radius: 4px;
+	padding: 2px 8px;
+	font-size: 13px;
+}
+
+/* ---- Slide-over ------------------------------------------------------- */
+.billigoo-slideover-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba( 0, 0, 0, 0.35 );
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s ease, visibility 0.2s ease;
+	z-index: 99998;
+}
+
+.billigoo-slideover-overlay * { box-sizing: border-box; }
+
+.billigoo-slideover-overlay.is-open { opacity: 1; visibility: visible; }
+
+.billigoo-slideover {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 600px;
+	max-width: 100%;
+	background: var( --bg-surface );
+	box-shadow: -4px 0 12px rgba( 0, 0, 0, 0.08 );
+	transform: translateX( 100% );
+	transition: transform 0.25s cubic-bezier( 0.4, 0, 0.2, 1 );
+	z-index: 99999;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.billigoo-slideover-overlay.is-open .billigoo-slideover { transform: translateX( 0 ); }
+
+.billigoo-slideover__head {
+	padding: 20px 24px;
+	border-bottom: 1px solid var( --bg-outline-variant );
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.billigoo-slideover__head h2 { margin: 0; font-size: 18px; font-weight: 600; }
+.billigoo-slideover__close {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	color: var( --bg-on-surface-variant );
+	display: inline-flex;
+	padding: 4px;
+	border-radius: 6px;
+}
+.billigoo-slideover__close:hover { background: var( --bg-surface-container ); }
+
+.billigoo-slideover__body { padding: 24px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 20px; }
+
+.billigoo-detail-amount {
+	font-size: 36px;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: var( --bg-primary );
+}
+
+.billigoo-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+.billigoo-detail-grid dt { font-size: 12px; font-weight: 600; text-transform: uppercase; color: var( --bg-on-surface-variant ); margin: 0 0 2px; }
+.billigoo-detail-grid dd { margin: 0; font-size: 15px; font-weight: 500; }
+
+.billigoo-slideover__foot {
+	padding: 16px 24px;
+	border-top: 1px solid var( --bg-outline-variant );
+	display: flex;
+	gap: 12px;
+}
+
+/* ---- Tabs -------------------------------------------------------------- */
+.billigoo-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	border-bottom: 1px solid var( --bg-outline-variant );
+	margin-bottom: 24px;
+}
+
+.billigoo-tab {
+	padding: 10px 16px;
+	text-decoration: none;
+	color: var( --bg-on-surface-variant );
+	font-size: 14px;
+	font-weight: 600;
+	border-bottom: 2px solid transparent;
+	margin-bottom: -1px;
+}
+
+.billigoo-tab:hover { color: var( --bg-primary ); }
+
+.billigoo-tab.is-active {
+	color: var( --bg-primary );
+	border-bottom-color: var( --bg-primary-container );
+}
+
+/* ---- Wizard ----------------------------------------------------------- */
+.billigoo-wizard {
+	max-width: 640px;
+	margin: 40px auto;
+}
+
+.billigoo-wizard__brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 24px;
+}
+
+.billigoo-wizard__brand .material-symbols-outlined { font-size: 32px; color: var( --bg-primary ); }
+.billigoo-wizard__brand span { font-size: 24px; font-weight: 700; color: var( --bg-primary ); }
+
+.billigoo-progress {
+	height: 8px;
+	background: var( --bg-surface-variant );
+	border-radius: 9999px;
+	overflow: hidden;
+	margin-bottom: 8px;
+}
+
+.billigoo-progress__bar {
+	height: 100%;
+	background: var( --bg-primary-container );
+	border-radius: 9999px;
+	transition: width 0.3s ease;
+}
+
+.billigoo-progress__label {
+	font-size: 12px;
+	color: var( --bg-on-surface-variant );
+	text-align: right;
+	margin: 0 0 20px;
+}
+
+.billigoo-wizard .billigoo-card__body h2 {
+	margin: 0 0 4px;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+.billigoo-wizard__lead { color: var( --bg-on-surface-variant ); margin: 0 0 24px; font-size: 14px; }
+
+.billigoo-wizard__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 28px;
+}
+
+.billigoo-wizard__steps {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 20px;
+}
+
+.billigoo-wizard__dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var( --bg-outline-variant );
+}
+
+.billigoo-wizard__dot.is-active { background: var( --bg-primary-container ); width: 24px; border-radius: 9999px; }
+.billigoo-wizard__dot.is-done { background: var( --bg-primary ); }
+
+.billigoo-wizard__done {
+	text-align: center;
+	padding: 16px 0;
+}
+
+.billigoo-wizard__done .billigoo-success-ring {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: var( --badge-success-bg );
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 16px;
+}
+
+.billigoo-wizard__done .billigoo-success-ring .material-symbols-outlined { font-size: 44px; color: var( --bg-success ); }

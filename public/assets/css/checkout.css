@@ -1,0 +1,97 @@
+/**
+ * Billigoo B2B checkout fields — storefront styling aligned with the
+ * Billigoo design system (no external dependencies).
+ */
+.billigoo-b2b {
+	--bg-primary: #006591;
+	--bg-primary-container: #0ea5e9;
+	--bg-surface-low: #eff4fa;
+	--bg-outline-variant: #bec8d2;
+	--bg-on-surface: #161c20;
+	--bg-on-surface-variant: #3e4850;
+	--bg-success: #15803d;
+	--bg-error: #b91c1c;
+
+	margin-top: 1.5em;
+	border: 1px solid var( --bg-outline-variant );
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.08 );
+	overflow: hidden;
+}
+
+.billigoo-b2b__head {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 18px 20px;
+	background: var( --bg-surface-low );
+	border-bottom: 1px solid var( --bg-outline-variant );
+}
+
+.billigoo-b2b__head .billigoo-b2b__icon {
+	flex: none;
+	width: 38px;
+	height: 38px;
+	border-radius: 9px;
+	background: #c9e6ff;
+	color: var( --bg-primary );
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+}
+
+.billigoo-b2b__title {
+	font-size: 15px;
+	font-weight: 700;
+	color: var( --bg-on-surface );
+	margin: 0 0 2px;
+}
+
+.billigoo-b2b__sub {
+	font-size: 13px;
+	color: var( --bg-on-surface-variant );
+	margin: 0;
+	line-height: 1.4;
+}
+
+.billigoo-b2b__body { padding: 16px 20px; }
+
+/* Toggle row */
+.billigoo-b2b .form-row.billigoo-toggle-row {
+	margin: 0 0 4px;
+	padding: 0;
+}
+
+.billigoo-b2b .billigoo-b2b-conditional {
+	margin-top: 14px;
+	padding-top: 14px;
+	border-top: 1px dashed var( --bg-outline-variant );
+}
+
+.billigoo-b2b input[type="text"]:focus {
+	border-color: var( --bg-primary-container );
+	box-shadow: 0 0 0 2px rgba( 14, 165, 233, 0.25 );
+	outline: none;
+}
+
+/* Inline SIRET validation feedback */
+.billigoo-feedback {
+	margin: 4px 0 0;
+	font-size: 0.85em;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 1.2em;
+}
+
+.billigoo-feedback::before {
+	font-weight: 700;
+}
+
+.billigoo-feedback.is-valid { color: var( --bg-success ); }
+.billigoo-feedback.is-valid::before { content: '✓'; }
+.billigoo-feedback.is-invalid { color: var( --bg-error ); }
+.billigoo-feedback.is-invalid::before { content: '✕'; }
