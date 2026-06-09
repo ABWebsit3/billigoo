@@ -46,7 +46,7 @@ final class SettingsPage {
 	 */
 	public function register(): void {
 		add_action( 'admin_init', array( $this, 'register_setting' ) );
-		add_filter( 'option_page_capability_' . self::GROUP, static fn() => 'manage_woocommerce' );
+		add_filter( 'option_page_capability_' . self::GROUP, static fn() => 'manage_options' );
 		add_action( 'wp_ajax_billigoo_test_pa', array( $this, 'ajax_test_pa' ) );
 		add_action( 'admin_post_billigoo_license', array( $this, 'handle_license' ) );
 	}
@@ -70,7 +70,7 @@ final class SettingsPage {
 	 */
 	public function ajax_test_pa(): void {
 		check_ajax_referer( 'billigoo_test_pa', 'nonce' );
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error( array( 'message' => __( 'Accès refusé.', 'billigoo' ) ), 403 );
 		}
 		$result = PaRouter::configured()->connect();
@@ -81,7 +81,7 @@ final class SettingsPage {
 	 * Activate or deactivate a licence key.
 	 */
 	public function handle_license(): void {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Accès refusé.', 'billigoo' ), 403 );
 		}
 		check_admin_referer( 'billigoo_license' );
@@ -104,7 +104,7 @@ final class SettingsPage {
 	 * Render the page.
 	 */
 	public function render(): void {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 		$tabs = $this->tabs();

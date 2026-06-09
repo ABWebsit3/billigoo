@@ -24,7 +24,7 @@ final class InvoicesPage {
 	 * Render the page.
 	 */
 	public function render(): void {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 

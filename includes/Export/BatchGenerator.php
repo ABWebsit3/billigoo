@@ -60,7 +60,7 @@ final class BatchGenerator {
 		if ( self::BULK_KEY !== $action ) {
 			return $redirect;
 		}
-		if ( ! current_user_can( 'manage_woocommerce' ) || ! License::has_feature( 'batch' ) ) {
+		if ( ! current_user_can( 'manage_options' ) || ! License::has_feature( 'batch' ) ) {
 			return $redirect;
 		}
 

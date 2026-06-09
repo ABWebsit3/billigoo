@@ -45,7 +45,7 @@ final class Activator {
 		// Send the admin to the onboarding wizard on the next page load, unless
 		// setup has already been completed on a previous activation.
 		if ( ! get_option( 'billigoo_setup_complete' ) ) {
-			set_transient( 'billigoo_activation_redirect', 1, 30 );
+			set_transient( 'billigoo_activation_redirect', 1, 60 );
 		}
 
 		flush_rewrite_rules();

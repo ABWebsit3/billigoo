@@ -47,7 +47,7 @@ final class WizardPage {
 	 */
 	public function handle_save(): void {
 		check_admin_referer( self::NONCE );
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Action non autorisée.', 'billigoo' ) );
 		}
 
@@ -75,7 +75,7 @@ final class WizardPage {
 	 * Render the wizard.
 	 */
 	public function render(): void {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 

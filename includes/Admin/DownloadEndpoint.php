@@ -37,7 +37,7 @@ final class DownloadEndpoint {
 	 * @return \WC_Order
 	 */
 	private function authorise( string $nonce_prefix ): \WC_Order {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Accès refusé.', 'billigoo' ), 403 );
 		}
 		$order_id = isset( $_GET['order_id'] ) ? absint( $_GET['order_id'] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended

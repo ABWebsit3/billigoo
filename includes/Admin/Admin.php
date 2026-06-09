@@ -63,7 +63,7 @@ final class Admin {
 		$this->page_hooks[] = add_menu_page(
 			__( 'Billigoo', 'billigoo' ),
 			__( 'Billigoo', 'billigoo' ),
-			'manage_woocommerce',
+			'manage_options',
 			'billigoo',
 			array( $this->dashboard_page, 'render' ),
 			'dashicons-media-spreadsheet',
@@ -74,7 +74,7 @@ final class Admin {
 			'billigoo',
 			__( 'Tableau de bord', 'billigoo' ),
 			__( 'Tableau de bord', 'billigoo' ),
-			'manage_woocommerce',
+			'manage_options',
 			'billigoo',
 			array( $this->dashboard_page, 'render' )
 		);
@@ -83,7 +83,7 @@ final class Admin {
 			'billigoo',
 			__( 'Factures Billigoo', 'billigoo' ),
 			__( 'Factures', 'billigoo' ),
-			'manage_woocommerce',
+			'manage_options',
 			'billigoo-invoices',
 			array( $this->invoices_page, 'render' )
 		);
@@ -92,7 +92,7 @@ final class Admin {
 			'billigoo',
 			__( 'Réglages Billigoo', 'billigoo' ),
 			__( 'Réglages', 'billigoo' ),
-			'manage_woocommerce',
+			'manage_options',
 			'billigoo-settings',
 			array( $this->settings_page, 'render' )
 		);
@@ -102,7 +102,7 @@ final class Admin {
 			'billigoo',
 			__( 'Assistant de configuration', 'billigoo' ),
 			__( 'Assistant', 'billigoo' ),
-			'manage_woocommerce',
+			'manage_options',
 			'billigoo-setup',
 			array( $this->wizard_page, 'render' )
 		);
@@ -147,15 +147,17 @@ final class Admin {
 		if ( ! get_transient( 'billigoo_activation_redirect' ) ) {
 			return;
 		}
-		delete_transient( 'billigoo_activation_redirect' );
 
-		if ( wp_doing_ajax() || is_network_admin() || ! current_user_can( 'manage_woocommerce' ) ) {
+		// Don't consume the transient on AJAX/network requests — wait for a real admin page load.
+		if ( wp_doing_ajax() || is_network_admin() || ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 		if ( get_option( 'billigoo_setup_complete' ) ) {
+			delete_transient( 'billigoo_activation_redirect' );
 			return;
 		}
 
+		delete_transient( 'billigoo_activation_redirect' );
 		wp_safe_redirect( admin_url( 'admin.php?page=billigoo-setup' ) );
 		exit;
 	}

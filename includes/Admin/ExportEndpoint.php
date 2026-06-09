@@ -47,7 +47,7 @@ final class ExportEndpoint {
 	 * Authorise an export request.
 	 */
 	private function authorise(): void {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Accès refusé.', 'billigoo' ), 403 );
 		}
 		check_admin_referer( self::NONCE );

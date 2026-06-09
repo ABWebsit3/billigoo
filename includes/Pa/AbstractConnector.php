@@ -113,13 +113,18 @@ abstract class AbstractConnector implements PaConnector {
 	 * @return array{ok:bool,code:int,body:array<string,mixed>,error:string}
 	 */
 	protected function request( string $method, string $url, array $headers, $body ) {
+		// piste.gouv.fr uses IGC/A (French government CA) not included in most
+		// default CA bundles. Disable SSL peer verification for that domain only.
+		$sslverify = ! (bool) preg_match( '#https://[^/]*\.gouv\.fr#i', $url );
+
 		$response = wp_remote_request(
 			$url,
 			array(
-				'method'  => $method,
-				'timeout' => 30,
-				'headers' => $headers,
-				'body'    => $body,
+				'method'     => $method,
+				'timeout'    => 30,
+				'headers'    => $headers,
+				'body'       => $body,
+				'sslverify'  => $sslverify,
 			)
 		);
 

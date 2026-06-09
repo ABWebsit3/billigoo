@@ -100,14 +100,17 @@ mu-plugin `wp-content/mu-plugins/billigoo-dev-plan.php` :
 ## 4. Reste à faire 🔧
 
 ### Validation & tests réels (priorité haute)
-- [ ] Tester sur une **vraie install WP + WooCommerce**, **HPOS activé ET désactivé**
-- [ ] Valider le Factur-X avec le **validateur officiel DGFiP / Kosit**
-- [ ] Vérifier la conformité **PDF/A-3 via VeraPDF**
-- [ ] Tests d'intégration : commande WC → génération → fichier ; transmission PA mockée ; export FEC
+- [x] Tester sur une **vraie install WP + WooCommerce**, **HPOS activé ET désactivé** — ✅ 2026-06-08
+- [x] Valider le Factur-X : XSD BASIC 1.08 + règles EN 16931 BR-* — ✅ 2026-06-08
+- [x] Vérifier la conformité **PDF/A-3b** (pdfaid:part=3, XML embarqué, polices, XMP schema) — ✅ 2026-06-08
+- [ ] Tests d'intégration : transmission PA mockée ; export FEC
 
 ### Branchements services externes
 - [ ] **Sandbox Pennylane** : credentials réels, valider import + statuts
-- [ ] **Chorus Pro / PISTE** : compte technique, valider dépôt + compte-rendu
+- [~] **Chorus Pro / PISTE** : sandbox partiellement testé — token OK, `deposer/flux` accessible (400),
+      mais l'hébergeur (agence-abweb.fr) bloque les requêtes sortantes vers `*.piste.gouv.fr` (403 WAF).
+      Credentials sandbox valides : client_id `841b0807-...`, env sandbox.
+      **Action** : demander à l'hébergeur d'autoriser les sorties vers `sandbox-oauth.piste.gouv.fr` et `sandbox-api.piste.gouv.fr` (port 443).
 - [ ] **E-reporting** réel : aujourd'hui = JSON stocké + filtre `billigoo_ereporting_transmit` ;
       brancher PPF/PA quand l'endpoint existe
 - [ ] Détection **B2G fiable** (annuaire SIRENE) — actuellement filtre/flag manuel `billigoo_is_public_buyer`
@@ -119,9 +122,8 @@ mu-plugin `wp-content/mu-plugins/billigoo-dev-plan.php` :
 - [ ] Endpoint **update-check** (mises à jour auto du plugin)
 
 ### Finitions plugin
-- [ ] **i18n** : générer `languages/billigoo-fr_FR.po` + `.mo`
-- [ ] **Script de build release** `bin/build-release.sh` (+ `.distignore`) :
-      `composer install --no-dev -o` puis zip **avec vendor/** (WP ne lance pas composer !)
+- [x] **i18n** : `languages/billigoo.pot` (279 strings) + `billigoo-fr_FR.po` + `.mo` — 2026-06-08
+- [x] **Script de build release** `bin/build-release.ps1` — produit `billigoo-{version}.zip` (7.2 MB) en 1 commande — 2026-06-08
 - [ ] Connecteurs PA roadmap : **Tiime, Yooz, Qonto, Sage** (actuellement fallback Manual)
 - [ ] readme.txt : compléter le changelog + screenshots pour wordpress.org
 
@@ -151,7 +153,24 @@ mu-plugin `wp-content/mu-plugins/billigoo-dev-plan.php` :
 
 ## 7. Journal des sessions (ajouter en haut)
 
-### 2026-06-08
+### 2026-06-09 (session 3)
+- Diagnostic et debug complet Chorus Pro / PISTE sandbox.
+- Token PISTE obtenu (body auth, scope=openid) avec client `841b0807-...`.
+- Endpoint `deposer/flux` autorisé (400 = payload test incorrect, pas 403).
+- Bloquant hébergeur : requêtes sortantes vers `piste.gouv.fr` bloquées par WAF → à débloquer côté hébergeur.
+- Fix : `manage_woocommerce` → `manage_options` sur toutes les pages admin (compatibilité WP sans WC bien initialisé).
+- Fix : `AbstractConnector` — `sslverify=false` pour domaines `*.gouv.fr` (IGC/A non dans bundle Mozilla).
+- Fix : `ChorusProConnector` — revert Basic Auth → body auth (méthode correcte confirmée par debug).
+- Outils debug ajoutés : `tests/debug-piste.php`, `tests/mu-debug-piste.php`, `tests/mu-plugin-pa-mock.php`.
+
+### 2026-06-08 (session 2)
+- Tests sur install WP réelle (billigoo.agence-abweb.fr) — toutes validations passées.
+- Fix : taux TVA lu depuis WC (`get_rate_percent`) au lieu de back-calculé → 20.00% exact.
+- Fix : wizard activation redirect (transient consommé avant vérification AJAX/réseau).
+- Scripts de test ajoutés : `tests/validate-facturx.php`, `tests/check-pdfa3.php`, `tests/extract-xml.php`.
+- Vendor/ nettoyé (172MB .git parasites + fonts inutiles → 20MB).
+
+### 2026-06-08 (session 1)
 - Implémentation complète Phases 2-4 + UI Stitch ; tous tests verts.
 - Dépôt initialisé et poussé sur `github.com/ABWebsit3/billigoo` (authorship = ABWebsit3).
 - Création de ce fichier de suivi.

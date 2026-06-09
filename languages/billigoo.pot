@@ -1,0 +1,1218 @@
+# Billigoo — Plugin WooCommerce Factur-X
+# Copyright (C) 2026 Billigoo
+# This file is distributed under the GPL-2.0-or-later license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Billigoo 1.0.0\n"
+"Report-Msgid-Bugs-To: https://billigoo.fr\n"
+"POT-Creation-Date: 2026-06-08 21:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Billigoo generate-pot.php\n"
+"X-Domain: billigoo\n"
+
+#: includes/Admin/Admin.php:64
+#: includes/Admin/Admin.php:65
+#: includes/Admin/OrderMetaBox.php:39
+msgid "Billigoo"
+msgstr ""
+
+#: includes/Admin/Admin.php:75
+#: includes/Admin/Admin.php:76
+#: includes/Admin/DashboardPage.php:40
+#: includes/Admin/InvoicesPage.php:70
+msgid "Tableau de bord"
+msgstr ""
+
+#: includes/Admin/Admin.php:84
+msgid "Factures Billigoo"
+msgstr ""
+
+#: includes/Admin/Admin.php:85
+#: includes/Admin/InvoicesPage.php:73
+msgid "Factures"
+msgstr ""
+
+#: includes/Admin/Admin.php:93
+msgid "Réglages Billigoo"
+msgstr ""
+
+#: includes/Admin/Admin.php:94
+#: includes/Admin/DashboardPage.php:35
+#: includes/Admin/SettingsPage.php:118
+msgid "Réglages"
+msgstr ""
+
+#: includes/Admin/Admin.php:103
+msgid "Assistant de configuration"
+msgstr ""
+
+#: includes/Admin/Admin.php:104
+msgid "Assistant"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:37
+msgid "Voir les factures"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:46
+msgid "Configuration terminée — Billigoo est prêt à générer vos factures Factur-X."
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:55
+msgid "L’identité du vendeur est incomplète. Aucune facture ne pourra être générée tant que les réglages ne sont pas remplis."
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:57
+#: includes/Admin/DashboardPage.php:65
+#: includes/Admin/InvoicesPage.php:81
+msgid "Configurer →"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:63
+msgid "Aucune Plateforme Agréée configurée. Configurez-la pour préparer la transmission automatique de la réforme 2026."
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:72
+msgid "Factures ce mois"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:82
+msgid "vs mois dernier"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:86
+msgid "CA facturé"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:93
+msgid "Factures émises"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:94
+msgid "TOTAL"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:101
+msgid "Dernier n° : %s"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:110
+msgid "Transmission PA"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:112
+msgid "ACTIVE"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:114
+msgid "À CONFIGURER"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:118
+msgid "Plateforme de Dématérialisation"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:126
+msgid "Statut de conformité réglementaire"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:131
+msgid "Génération Factur-X (BASIC) active"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:135
+msgid "Identité vendeur complète"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:135
+msgid "Identité vendeur à compléter"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:139
+msgid "Plateforme Agréée connectée"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:143
+msgid "Numérotation légale continue"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:151
+msgid "Activité récente"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:152
+msgid "Tout voir"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:162
+msgid "Raccourcis"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:166
+msgid "Configurer la PA"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:167
+msgid "Lier votre plateforme agréée"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:173
+msgid "Réglages de facturation"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:174
+msgid "Numérotation, déclencheur, emails"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:180
+msgid "Relancer l’assistant"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:181
+msgid "Reconfigurer pas à pas"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:189
+msgid "Ressources"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:191
+msgid "Guide conformité"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:192
+msgid "FAQ & support"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:193
+msgid "Calendrier réforme"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:201
+msgid "Besoin d’aide ?"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:202
+msgid "Nos experts vous accompagnent pour la réforme 2026."
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:230
+#: includes/Admin/InvoicesPage.php:112
+msgid "Aucune facture générée pour le moment."
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:237
+#: includes/Admin/InvoicesPage.php:118
+#: includes/Export/CsvExporter.php:30
+msgid "N° Facture"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:238
+#: includes/Admin/InvoicesPage.php:120
+#: includes/Admin/InvoicesPage.php:260
+#: includes/Export/CsvExporter.php:33
+msgid "Client"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:239
+#: includes/Admin/InvoicesPage.php:121
+msgid "Montant TTC"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:240
+#: includes/Admin/InvoicesPage.php:122
+#: includes/Admin/SettingsPage.php:340
+#: includes/Export/CsvExporter.php:32
+msgid "Date"
+msgstr ""
+
+#: includes/Admin/DashboardPage.php:241
+#: includes/Admin/InvoicesPage.php:123
+#: includes/Admin/OrderMetaBox.php:101
+#: includes/Export/CsvExporter.php:38
+msgid "Statut PA"
+msgstr ""
+
+#: includes/Admin/DownloadEndpoint.php:41
+#: includes/Admin/ExportEndpoint.php:51
+#: includes/Admin/SettingsPage.php:74
+#: includes/Admin/SettingsPage.php:85
+msgid "Accès refusé."
+msgstr ""
+
+#: includes/Admin/DownloadEndpoint.php:48
+#: includes/Api/RestApi.php:247
+msgid "Commande introuvable."
+msgstr ""
+
+#: includes/Admin/DownloadEndpoint.php:62
+#: includes/Pa/TransmissionManager.php:80
+msgid "Fichier de facture introuvable."
+msgstr ""
+
+#: includes/Admin/DownloadEndpoint.php:84
+msgid "XML Factur-X indisponible."
+msgstr ""
+
+#: includes/Admin/ExportEndpoint.php:62
+msgid "L’export FEC est réservé au plan Pro."
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:79
+msgid "L’identité du vendeur n’est pas complète : aucune nouvelle facture ne sera générée."
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:99
+msgid "Tous les statuts PA"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:104
+msgid "Rechercher…"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:119
+#: includes/Admin/InvoicesPage.php:258
+#: includes/Export/CsvExporter.php:31
+#: templates/invoice-premium/template.php:39
+msgid "Commande"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:230
+msgid "Précédent"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:233
+msgid "Suivant"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:246
+msgid "Détail de la facture"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:249
+msgid "Fermer"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:253
+#: includes/WooCommerce/EmailNotice.php:99
+msgid "Montant total TTC"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:259
+#: includes/WooCommerce/EmailNotice.php:91
+msgid "Date d’émission"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:261
+#: includes/Admin/WizardPage.php:301
+#: includes/Export/CsvExporter.php:34
+#: includes/WooCommerce/BlocksIntegration.php:63
+#: includes/WooCommerce/CheckoutFields.php:77
+msgid "SIRET"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:262
+msgid "Format"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:262
+msgid "FACTUR-X BASIC"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:264
+msgid "Ouvrir la commande"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:267
+#: includes/Admin/OrderMetaBox.php:114
+msgid "PDF"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:268
+#: includes/Admin/OrderMetaBox.php:115
+msgid "XML"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:269
+msgid "Transmettre"
+msgstr ""
+
+#: includes/Admin/InvoicesPage.php:91
+msgid "%d facture"
+msgid_plural "%d factures"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Admin/OrderMetaBox.php:64
+msgid "Configurez l’identité du vendeur pour générer une facture."
+msgstr ""
+
+#: includes/Admin/OrderMetaBox.php:72
+msgid "Aucune facture générée pour cette commande."
+msgstr ""
+
+#: includes/Admin/OrderMetaBox.php:73
+msgid "Générer maintenant"
+msgstr ""
+
+#: includes/Admin/OrderMetaBox.php:97
+#: includes/WooCommerce/EmailNotice.php:87
+msgid "Facture"
+msgstr ""
+
+#: includes/Admin/OrderMetaBox.php:99
+msgid "Générée le"
+msgstr ""
+
+#: includes/Admin/OrderMetaBox.php:124
+msgid "Transmettre à la PA"
+msgstr ""
+
+#: includes/Admin/OrderMetaBox.php:125
+msgid "Actualiser / retransmettre"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:34
+msgid "Général"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:35
+msgid "Facturation"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:36
+#: includes/Admin/WizardPage.php:39
+#: includes/Admin/WizardPage.php:219
+#: includes/Admin/WizardPage.php:303
+msgid "Plateforme Agréée"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:37
+msgid "E-reporting"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:38
+msgid "Export"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:39
+msgid "API & Webhooks"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:40
+msgid "Licence"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:176
+msgid "Enregistrer"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:188
+#: includes/Admin/WizardPage.php:37
+msgid "Identité de l’entreprise"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:190
+#: includes/Admin/WizardPage.php:163
+#: includes/Admin/WizardPage.php:300
+#: includes/WooCommerce/BlocksIntegration.php:54
+#: includes/WooCommerce/CheckoutFields.php:68
+msgid "Raison sociale"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:191
+#: includes/Admin/WizardPage.php:165
+msgid "N° TVA intracommunautaire"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:192
+msgid "SIREN"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:193
+msgid "SIRET (siège)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:194
+#: includes/Admin/WizardPage.php:166
+msgid "Adresse"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:195
+#: includes/Admin/WizardPage.php:167
+msgid "Code postal"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:196
+#: includes/Admin/WizardPage.php:168
+msgid "Ville"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:197
+msgid "Pays (ISO)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:201
+msgid "Numérotation"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:203
+#: includes/Admin/WizardPage.php:184
+msgid "Préfixe"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:203
+msgid "Jeton {year} accepté, ex. FA-{year}-"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:204
+#: includes/Admin/WizardPage.php:185
+msgid "Longueur (zéros)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:205
+#: includes/Admin/WizardPage.php:202
+msgid "Réinitialisation annuelle"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:206
+#: includes/Admin/WizardPage.php:188
+msgid "Statut déclencheur"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:207
+#: includes/Admin/WizardPage.php:192
+msgid "En cours (processing)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:208
+#: includes/Admin/WizardPage.php:193
+msgid "Terminée (completed)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:209
+#: includes/Admin/WizardPage.php:194
+msgid "En attente (on-hold)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:211
+msgid "Dernier numéro émis"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:223
+msgid "Format & facturation"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:225
+msgid "Profil Factur-X"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:229
+msgid "Devise"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:230
+#: includes/Admin/WizardPage.php:245
+msgid "Email client"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:230
+msgid "Joindre la facture Factur-X aux emails client"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:231
+msgid "Conditions de paiement"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:232
+msgid "Mentions légales"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:236
+#: includes/Admin/WizardPage.php:40
+msgid "Template PDF"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:238
+#: includes/Admin/WizardPage.php:262
+msgid "Modèle"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:239
+#: includes/Admin/WizardPage.php:264
+msgid "Standard"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:240
+#: includes/Admin/WizardPage.php:265
+msgid "Premium"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:242
+#: includes/Admin/WizardPage.php:269
+msgid "Couleur principale"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:243
+#: includes/Admin/WizardPage.php:273
+msgid "URL du logo"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:243
+msgid "Lien direct vers une image (PNG/JPG)."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:252
+msgid "Plateforme Agréée (PA)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:252
+msgid "CONFIGURÉE"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:252
+msgid "NON CONFIGURÉE"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:254
+msgid "La transmission automatique est une fonctionnalité du plan Pro. Vous pouvez enregistrer la configuration dès maintenant."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:257
+msgid "— Sélectionner —"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:258
+msgid "Plateforme"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:259
+#: includes/Admin/WizardPage.php:230
+msgid "Environnement"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:260
+#: includes/Admin/WizardPage.php:232
+msgid "Test (sandbox)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:261
+#: includes/Admin/WizardPage.php:233
+msgid "Production"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:263
+#: includes/Admin/WizardPage.php:237
+msgid "Clé API / Jeton"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:264
+msgid "Chorus Pro — Client ID"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:265
+msgid "Chorus Pro — Client Secret"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:266
+msgid "Tentatives en cas d’échec"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:267
+#: includes/Admin/WizardPage.php:241
+msgid "Transmission automatique"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:267
+#: includes/Admin/WizardPage.php:242
+msgid "Transmettre dès la génération (B2B)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:268
+msgid "Mode B2G (Chorus Pro)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:268
+msgid "Router les acheteurs publics vers Chorus Pro"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:270
+msgid "Tester la connexion"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:278
+msgid "E-reporting B2C"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:280
+msgid "L’e-reporting est inclus dans le plan Pro."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:283
+msgid "Activation"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:283
+msgid "Transmettre les données de transactions B2C"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:284
+msgid "Périodicité"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:285
+msgid "Mensuelle"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:286
+msgid "Trimestrielle"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:292
+msgid "Historique des envois"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:294
+msgid "Aucun rapport généré pour le moment."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:296
+msgid "Période"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:296
+msgid "Transactions"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:296
+#: includes/Export/CsvExporter.php:37
+#: templates/invoice-premium/template.php:99
+msgid "Total TTC"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:296
+msgid "Généré le"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:309
+msgid "API REST"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:311
+msgid "L’API REST et les webhooks sont inclus dans le plan Agence."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:314
+msgid "Activer l’API"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:315
+msgid "Base des endpoints"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:319
+msgid "Webhooks"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:321
+msgid "URL de destination"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:322
+msgid "Secret de signature (HMAC)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:323
+msgid "Événements"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:339
+msgid "Journal des livraisons"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:340
+msgid "Événement"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:340
+#: includes/Admin/StatusBadge.php:53
+msgid "Erreur"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:355
+msgid "Exports comptables"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:360
+msgid "Du"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:361
+msgid "Au"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:364
+msgid "Export CSV"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:365
+msgid "Export FEC"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:371
+msgid "Génération rétroactive en lot"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:373
+msgid "Sélectionnez des commandes dans WooCommerce → Commandes, puis l’action groupée « Générer Billigoo Factur-X » (jusqu’à 500 par lot, traitées en arrière-plan)."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:375
+msgid "Ouvrir les commandes"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:386
+msgid "Licence Billigoo"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:391
+#: includes/License.php:162
+msgid "Licence activée."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:392
+msgid "Licence désactivée."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:393
+msgid "Clé enregistrée."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:394
+msgid "Activation impossible — vérifiez la clé."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:401
+msgid "Le plan actif déverrouille les fonctionnalités. Sans serveur de licence, tout est déverrouillé par défaut pour le développement."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:407
+msgid "Clé de licence"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:410
+msgid "Statut"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:411
+msgid "Expiration"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:414
+msgid "Activer"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:416
+msgid "Désactiver"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:490
+#: includes/Admin/WizardPage.php:238
+msgid "(enregistré)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:490
+msgid "Non défini"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:491
+msgid "Laissez vide pour conserver la valeur actuelle. Stockée chiffrée."
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:48
+msgid "Acceptée"
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:49
+msgid "Payée"
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:50
+msgid "Envoyée"
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:51
+msgid "Réceptionnée"
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:52
+msgid "Rejetée"
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:54
+msgid "En attente"
+msgstr ""
+
+#: includes/Admin/StatusBadge.php:55
+#: includes/Admin/StatusBadge.php:57
+msgid "Non transmise"
+msgstr ""
+
+#: includes/Admin/Ui.php:43
+msgid "Conforme 2026"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:38
+msgid "Facturation & numérotation"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:41
+msgid "Récapitulatif"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:51
+msgid "Action non autorisée."
+msgstr ""
+
+#: includes/Admin/WizardPage.php:132
+msgid "Retour"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:136
+msgid "Continuer"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:160
+msgid "Ces informations figureront sur chaque facture Factur-X émise."
+msgstr ""
+
+#: includes/Admin/WizardPage.php:181
+msgid "La numérotation est séquentielle et sans rupture, conformément à la loi."
+msgstr ""
+
+#: includes/Admin/WizardPage.php:216
+msgid "Connectez votre plateforme (facultatif) pour préparer la transmission automatique."
+msgstr ""
+
+#: includes/Admin/WizardPage.php:221
+msgid "— Plus tard —"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:246
+msgid "Joindre la facture aux emails de commande"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:259
+msgid "Personnalisez l’apparence de vos factures PDF."
+msgstr ""
+
+#: includes/Admin/WizardPage.php:289
+msgid "Tout est prêt !"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:289
+msgid "Presque terminé"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:293
+msgid "Billigoo générera désormais une facture Factur-X conforme pour chaque commande éligible."
+msgstr ""
+
+#: includes/Admin/WizardPage.php:302
+msgid "Préfixe n°"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:303
+msgid "Non configurée"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:311
+msgid "Modifier"
+msgstr ""
+
+#: includes/Admin/WizardPage.php:312
+msgid "Terminer la configuration"
+msgstr ""
+
+#: includes/Api/RestApi.php:90
+msgid "Permission refusée."
+msgstr ""
+
+#: includes/Api/RestApi.php:93
+msgid "API REST réservée au plan Agence."
+msgstr ""
+
+#: includes/Api/RestApi.php:96
+msgid "Trop de requêtes."
+msgstr ""
+
+#: includes/Api/RestApi.php:144
+msgid "Facture introuvable."
+msgstr ""
+
+#: includes/Api/RestApi.php:200
+msgid "Fichier introuvable."
+msgstr ""
+
+#: includes/Api/RestApi.php:251
+msgid "Échec de génération."
+msgstr ""
+
+#: includes/Api/Webhooks.php:106
+msgid "Facture générée"
+msgstr ""
+
+#: includes/Api/Webhooks.php:107
+msgid "Facture transmise"
+msgstr ""
+
+#: includes/Api/Webhooks.php:108
+msgid "Facture acceptée"
+msgstr ""
+
+#: includes/Api/Webhooks.php:109
+msgid "Facture rejetée"
+msgstr ""
+
+#: includes/Api/Webhooks.php:110
+msgid "E-reporting transmis"
+msgstr ""
+
+#: includes/Core/InvoiceData.php:157
+msgid "Livraison"
+msgstr ""
+
+#: includes/Core/InvoiceGenerator.php:79
+msgid "Facture Billigoo %s générée (Factur-X BASIC)."
+msgstr ""
+
+#: includes/Core/InvoiceValidator.php:31
+msgid "L'identité du vendeur (raison sociale, SIRET, adresse) doit être configurée dans les réglages Billigoo."
+msgstr ""
+
+#: includes/Core/InvoiceValidator.php:36
+msgid "Le SIRET du vendeur est invalide."
+msgstr ""
+
+#: includes/Core/InvoiceValidator.php:42
+msgid "Commande professionnelle : le SIRET de l’acheteur est manquant."
+msgstr ""
+
+#: includes/Core/InvoiceValidator.php:44
+msgid "Commande professionnelle : le SIRET de l’acheteur est invalide."
+msgstr ""
+
+#: includes/Ereporting/Scheduler.php:38
+msgid "Une fois par mois (Billigoo)"
+msgstr ""
+
+#: includes/Ereporting/Scheduler.php:39
+msgid "Une fois par trimestre (Billigoo)"
+msgstr ""
+
+#: includes/Export/BatchGenerator.php:46
+msgid "Générer Billigoo Factur-X"
+msgstr ""
+
+#: includes/Export/CsvExporter.php:35
+#: templates/invoice-premium/template.php:89
+msgid "Total HT"
+msgstr ""
+
+#: includes/Export/CsvExporter.php:36
+#: templates/invoice-premium/template.php:70
+msgid "TVA"
+msgstr ""
+
+#: includes/License.php:122
+msgid "Clé de licence vide."
+msgstr ""
+
+#: includes/License.php:128
+msgid "Clé enregistrée (validation distante non configurée)."
+msgstr ""
+
+#: includes/License.php:151
+msgid "Licence refusée par le serveur."
+msgstr ""
+
+#: includes/Pa/ChorusProConnector.php:74
+msgid "Connexion Chorus Pro (PISTE) établie."
+msgstr ""
+
+#: includes/Pa/ChorusProConnector.php:74
+msgid "Échec d’authentification PISTE."
+msgstr ""
+
+#: includes/Pa/ChorusProConnector.php:81
+msgid "Authentification Chorus Pro impossible."
+msgstr ""
+
+#: includes/Pa/ChorusProConnector.php:84
+#: includes/Pa/PennylaneConnector.php:56
+msgid "Fichier PDF introuvable."
+msgstr ""
+
+#: includes/Pa/ChorusProConnector.php:100
+msgid "Dépôt Chorus Pro refusé."
+msgstr ""
+
+#: includes/Pa/ChorusProConnector.php:106
+msgid "Déposée sur Chorus Pro."
+msgstr ""
+
+#: includes/Pa/ManualConnector.php:23
+msgid "Mode manuel : aucune transmission automatique."
+msgstr ""
+
+#: includes/Pa/ManualConnector.php:30
+msgid "Transmission manuelle requise (PDP non automatisée)."
+msgstr ""
+
+#: includes/Pa/PennylaneConnector.php:45
+msgid "Jeton API Pennylane manquant."
+msgstr ""
+
+#: includes/Pa/PennylaneConnector.php:50
+msgid "Connexion Pennylane établie."
+msgstr ""
+
+#: includes/Pa/PennylaneConnector.php:50
+msgid "Échec de connexion."
+msgstr ""
+
+#: includes/Pa/PennylaneConnector.php:78
+msgid "Transmission refusée."
+msgstr ""
+
+#: includes/Pa/PennylaneConnector.php:84
+msgid "Transmise à Pennylane."
+msgstr ""
+
+#: includes/Pa/TransmissionManager.php:64
+msgid "Transmission PA réservée au plan Pro."
+msgstr ""
+
+#: includes/Pa/TransmissionManager.php:67
+msgid "Aucune facture à transmettre."
+msgstr ""
+
+#: includes/Pa/TransmissionManager.php:70
+msgid "Plateforme Agréée non configurée."
+msgstr ""
+
+#: includes/Pa/TransmissionManager.php:74
+msgid "Commande B2C : relève de l’e-reporting."
+msgstr ""
+
+#: includes/Pa/TransmissionManager.php:175
+msgid "Statut mis à jour automatiquement."
+msgstr ""
+
+#: includes/Settings.php:123
+msgid "Autre PDP"
+msgstr ""
+
+#: includes/WooCommerce/BlocksIntegration.php:46
+#: includes/WooCommerce/CheckoutFields.php:57
+msgid "Je commande en tant que professionnel"
+msgstr ""
+
+#: includes/WooCommerce/BlocksIntegration.php:72
+msgid "Le numéro SIRET saisi est invalide."
+msgstr ""
+
+#: includes/WooCommerce/BlocksIntegration.php:81
+#: includes/WooCommerce/CheckoutFields.php:88
+msgid "Numéro de TVA intracommunautaire"
+msgstr ""
+
+#: includes/WooCommerce/BlocksIntegration.php:104
+#: includes/WooCommerce/CheckoutFields.php:112
+msgid "Veuillez indiquer votre raison sociale."
+msgstr ""
+
+#: includes/WooCommerce/BlocksIntegration.php:107
+#: includes/WooCommerce/CheckoutFields.php:115
+msgid "Veuillez indiquer votre numéro SIRET."
+msgstr ""
+
+#: includes/WooCommerce/CheckoutFields.php:49
+msgid "Facturation professionnelle (B2B)"
+msgstr ""
+
+#: includes/WooCommerce/CheckoutFields.php:50
+msgid "Recevez une facture Factur-X conforme avec votre SIRET et votre TVA."
+msgstr ""
+
+#: includes/WooCommerce/CheckoutFields.php:182
+msgid "SIRET valide"
+msgstr ""
+
+#: includes/WooCommerce/EmailNotice.php:73
+msgid "Votre facture est prête"
+msgstr ""
+
+#: includes/WooCommerce/EmailNotice.php:78
+msgid "Cette facture respecte le standard européen %s, garantissant sa conformité avec la réforme de la facturation électronique."
+msgstr ""
+
+#: includes/WooCommerce/EmailNotice.php:103
+msgid "CONFORME FACTUR-X"
+msgstr ""
+
+#: includes/WooCommerce/EmailNotice.php:110
+msgid "La facture PDF/A-3 (Factur-X) est jointe à cet email."
+msgstr ""
+
+#: includes/WooCommerce/Integration.php:66
+msgid "Billigoo : échec de génération de la facture — %s"
+msgstr ""
+
+#: templates/invoice-premium/template.php:46
+msgid "Émetteur"
+msgstr ""
+
+#: templates/invoice-premium/template.php:54
+msgid "Facturé à"
+msgstr ""
+
+#: templates/invoice-premium/template.php:67
+msgid "Désignation"
+msgstr ""
+
+#: templates/invoice-premium/template.php:68
+msgid "Qté"
+msgstr ""
+
+#: templates/invoice-premium/template.php:69
+msgid "PU HT"
+msgstr ""
+
+#: templates/invoice-premium/template.php:71
+msgid "Montant HT"
+msgstr ""
+
+#: templates/invoice-premium/template.php:105
+msgid "Conditions de paiement :"
+msgstr ""
+
+#: templates/invoice-premium/template.php:108
+msgid "Signature / cachet"
+msgstr ""
+
+#: templates/invoice-premium/template.php:114
+msgid "Facture électronique conforme Factur-X — Profil %s."
+msgstr ""
+
+#: billigoo.php:35
+msgid "Billigoo : dépendances manquantes. Exécutez « composer install » dans le dossier du plugin."
+msgstr ""
+
+#: billigoo.php:68
+msgid "Billigoo requiert WooCommerce actif."
+msgstr ""
+

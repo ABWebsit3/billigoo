@@ -23,7 +23,7 @@ final class DashboardPage {
 	 * Render the dashboard.
 	 */
 	public function render(): void {
-		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 
